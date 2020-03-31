@@ -4,7 +4,7 @@
 
 - Descargar submodulos:
 
-`git submodule update --recursive --remote`
+`git submodule update --init`
 
 - Crear archivo `.env`
 

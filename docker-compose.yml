@@ -19,7 +19,7 @@ services:
       - movies-network
       - shared-network
     ports:
-      - "${USERS_PORT}:8081"
+      - "${MOVIES_PORT}:8081"
 
   users:
     working_dir: /go/src/github.com/ceiba-meli-demo/users
@@ -42,7 +42,7 @@ services:
       - users-network
       - shared-network
     ports:
-      - "${MOVIES_PORT}:8086"
+      - "${USERS_PORT}:8086"
 
   mongodb:
     image: mongo:4.0-xenial
