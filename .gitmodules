@@ -1,6 +1,8 @@
 [submodule "users"]
 	path = users
+	branch = master
 	url = https://github.com/ceiba-meli-demo/users
 [submodule "movies"]
 	path = movies
+	branch=master
 	url = https://github.com/ceiba-meli-demo/movies
