@@ -6,7 +6,7 @@ services:
       context: ./movies
     volumes:
       - ./movies:/go/src/github.com/ceiba-meli-demo/movies
-    command: go run .
+    command: go run main.go
     depends_on:
       - mongodb
     environment:
@@ -28,7 +28,7 @@ services:
       context: ./users
     volumes:
       - ./users:/go/src/github.com/ceiba-meli-demo/users
-    command: go run .
+    # command: go run .
     depends_on:
       - postgres
     environment:
@@ -47,6 +47,8 @@ services:
   mongodb:
     image: mongo:4.0-xenial
     restart: always
+    ports:
+      - "27017:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
