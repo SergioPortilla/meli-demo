@@ -28,7 +28,7 @@ services:
       context: ./users
     volumes:
       - ./users:/go/src/github.com/ceiba-meli-demo/users
-    # command: go run .
+    command: go run .
     depends_on:
       - postgres
     environment:
