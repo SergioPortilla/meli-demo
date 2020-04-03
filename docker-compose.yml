@@ -15,8 +15,8 @@ services:
       MONGODB_PASSWORD: ${MONGODB_PASSWORD}
       MONGODB_HOST: ${MONGODB_HOST}
       MONGODB_PORT: ${MONGODB_PORT}
-      USERS_HOST: ${HOST_USERS_SERVICE}
-      USERS_PORT: ${PORT_USERS_SERVICE}
+      USERS_HOST: ${USERS_SERVICE_HOST}
+      USERS_PORT: ${USERS_SERVICE_PORT}
     networks:
       - movies-network
       - shared-network
